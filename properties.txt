@@ -1,0 +1,14 @@
+valid: word, error, rare_or_error, word_or_space, spaced, foreign, foreign_stem, abbreviation, fragment_hyphenation, fragment_misstemmed
+alt_form: (list of strings)
+language: (string)
+part_of_speech: (list of {noun, PN_place, PN_person, PN_tangible, PN_intangible, adj, verb, adv, prep): (percentage)})
+stemming: (list of stems, prefixes, suffixes)
+derived_words: (list)
+error: typo, spelling, emphasis, mockery, humerous, other_deliberate
+
+for word in all_words :
+  letters = "".join(word.split('_'))
+  if letters != word and letters in all_words :
+    print (letters, word)
+
+Split into guessed languages
